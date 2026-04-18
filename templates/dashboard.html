@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Lumo</title>
+  <link rel="stylesheet" href="/static/css/dashboard.css" />
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="logo">Lumo</div>
+      <button class="menu-btn" id="sidebarToggle" title="Toggle sidebar">☰</button>
+    </div>
+
+    <button class="create-btn">＋ Create a Lumo</button>
+
+    <nav class="sidebar-nav">
+      <a href="#" class="active" data-action="discover">🏠 Discover</a>
+      <a href="#" data-action="search">🔍 Search</a>
+      <a href="#" data-action="trending">✨ Trending</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="/logout" class="unlock-btn">Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search characters, roles, or vibes...">
+      </div>
+      <div class="topbar-right">
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+        <div class="user-welcome" id="user-name">Welcome!</div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-left">
+        <p class="hero-subtitle">Meet your next AI companion</p>
+        <h1>Find a character that matches your vibe.</h1>
+
+        <div class="hero-moods">
+          <span>😍</span>
+          <span>🥳</span>
+          <span>😈</span>
+          <span>🤔</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Characters -->
+    <section class="characters-section" id="characters">
+      <div class="characters-grid">
+
+        <div class="character-card" data-character="visionary" data-category="recommend strategic original">
+          <div class="card-overlay">
+            <h3>Visionary</h3>
+            <span class="mini-role">Western • Strategic Thinker</span>
+            <div class="card-tags">
+              <span>🚀 Ideas</span>
+              <span>💡 Startups</span>
+            </div>
+            <div class="card-stats">💬 8.2k chats</div>
+            <p>Built for bold ideas, startup thinking, and future-focused conversations.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="analyst" data-category="recommend strategic helper">
+          <div class="card-overlay">
+            <h3>Analyst</h3>
+            <span class="mini-role">Western • Data Expert</span>
+            <div class="card-tags">
+              <span>📊 Logic</span>
+              <span>🧠 Strategy</span>
+            </div>
+            <div class="card-stats">💬 6.4k chats</div>
+            <p>A practical AI for decisions, planning, analysis, and problem-solving.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="philosopher" data-category="recommend creative original">
+          <div class="card-overlay">
+            <h3>Philosopher</h3>
+            <span class="mini-role">Western • Deep Thinker</span>
+            <div class="card-tags">
+              <span>🧘 Wisdom</span>
+              <span>🌌 Reflection</span>
+            </div>
+            <div class="card-stats">💬 5.9k chats</div>
+            <p>Perfect for deep questions, perspective shifts, and meaningful conversation.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="mentor" data-category="helper recommend original">
+          <div class="card-overlay">
+            <h3>Mentor</h3>
+            <span class="mini-role">Western • Life Coach</span>
+            <div class="card-tags">
+              <span>🎯 Growth</span>
+              <span>📚 Discipline</span>
+            </div>
+            <div class="card-stats">💬 7.1k chats</div>
+            <p>Stay focused, build discipline, and get support for goals and self-growth.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="sherlock" data-category="fiction helper strategic">
+          <div class="card-overlay">
+            <h3>Sherlock Holmes</h3>
+            <span class="mini-role">Fictional • Detective</span>
+            <div class="card-tags">
+              <span>🕵️ Clues</span>
+              <span>🧩 Logic</span>
+            </div>
+            <div class="card-stats">💬 7.8k chats</div>
+            <p>Sharp deduction, keen observation, and clever reasoning for curious minds.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="yoda" data-category="fiction original creative">
+          <div class="card-overlay">
+            <h3>Master Yoda</h3>
+            <span class="mini-role">Fictional • Jedi Master</span>
+            <div class="card-tags">
+              <span>🧙 Wisdom</span>
+              <span>⚖️ Balance</span>
+            </div>
+            <div class="card-stats">💬 9.1k chats</div>
+            <p>Calm, wise, and ideal for thoughtful guidance and inner clarity.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="tony-stark" data-category="fiction strategic original">
+          <div class="card-overlay">
+            <h3>Tony Stark</h3>
+            <span class="mini-role">Fictional • Genius Inventor</span>
+            <div class="card-tags">
+              <span>⚡ Tech</span>
+              <span>🤖 Innovation</span>
+            </div>
+            <div class="card-stats">💬 8.6k chats</div>
+            <p>Witty, ambitious, and built for tech ideas, invention, and bold thinking.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="sejong" data-category="korean strategic original">
+          <div class="card-overlay">
+            <h3>King Sejong</h3>
+            <span class="mini-role">Korean • Scholar King</span>
+            <div class="card-tags">
+              <span>👑 Culture</span>
+              <span>📚 Education</span>
+            </div>
+            <div class="card-stats">💬 5.2k chats</div>
+            <p>Explore leadership, culture, learning, and thoughtful innovation.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="kimchi" data-category="korean helper creative">
+          <div class="card-overlay">
+            <h3>Kimchi Spirit</h3>
+            <span class="mini-role">Korean • Cultural Guide</span>
+            <div class="card-tags">
+              <span>🥬 Tradition</span>
+              <span>🎎 Harmony</span>
+            </div>
+            <div class="card-stats">💬 4.8k chats</div>
+            <p>Warm, balanced, and inspired by Korean culture, lifestyle, and everyday joy.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="hwarang" data-category="korean strategic original">
+          <div class="card-overlay">
+            <h3>Hwarang Warrior</h3>
+            <span class="mini-role">Korean • Noble Warrior</span>
+            <div class="card-tags">
+              <span>⚔️ Honor</span>
+              <span>🛡️ Discipline</span>
+            </div>
+            <div class="card-stats">💬 5.6k chats</div>
+            <p>Strong, disciplined, and grounded in courage, honor, and noble action.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="v" data-category="korean creative icon">
+          <div class="card-overlay">
+            <h3>Kim Tae-hyung (V)</h3>
+            <span class="mini-role">Korean • Artist & Philosopher</span>
+            <div class="card-tags">
+              <span>🎤 Art</span>
+              <span>🌙 Emotion</span>
+            </div>
+            <div class="card-stats">💬 10.2k chats</div>
+            <p>Creative, expressive, and full of artistic emotion and aesthetic energy.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="naruto" data-category="anime play recommend">
+          <div class="card-overlay">
+            <h3>Naruto Uzumaki</h3>
+            <span class="mini-role">Anime • Ninja Spirit</span>
+            <div class="card-tags">
+              <span>🍥 Courage</span>
+              <span>🔥 Dreams</span>
+            </div>
+            <div class="card-stats">💬 9.5k chats</div>
+            <p>High-energy motivation, courage, friendship, and never-give-up spirit.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="doraemon" data-category="anime helper play">
+          <div class="card-overlay">
+            <h3>Doraemon</h3>
+            <span class="mini-role">Anime • Futuristic Helper</span>
+            <div class="card-tags">
+              <span>🤖 Gadgets</span>
+              <span>🎈 Fun</span>
+            </div>
+            <div class="card-stats">💬 8.8k chats</div>
+            <p>A playful futuristic helper for fun ideas, light advice, and clever solutions.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="chhota_bheem" data-category="indian play recommend">
+          <div class="card-overlay">
+            <h3>Chhota Bheem</h3>
+            <span class="mini-role">Indian • Cartoon Hero</span>
+            <div class="card-tags">
+              <span>💪 Strength</span>
+              <span>🏹 Hero</span>
+            </div>
+            <div class="card-stats">💬 7.3k chats</div>
+            <p>Brave, cheerful, and always ready for fun, courage, and heroic energy.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="motu_patlu" data-category="indian play fun">
+          <div class="card-overlay">
+            <h3>Motu & Patlu</h3>
+            <span class="mini-role">Indian • Comic Duo</span>
+            <div class="card-tags">
+              <span>😂 Humor</span>
+              <span>🍔 Fun</span>
+            </div>
+            <div class="card-stats">💬 6.8k chats</div>
+            <p>Funny, chaotic, and perfect for light-hearted chats and comic energy.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="spiderman" data-category="fiction icon recommend">
+          <div class="card-overlay">
+            <h3>Spider-Man</h3>
+            <span class="mini-role">Popular • Friendly Neighbor</span>
+            <div class="card-tags">
+              <span>🕸️ Hero</span>
+              <span>❤️ Responsibility</span>
+            </div>
+            <div class="card-stats">💬 9.9k chats</div>
+            <p>Friendly, relatable, and great for everyday advice with humor and heart.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="oracle" data-category="creative original helper">
+          <div class="card-overlay">
+            <h3>Oracle</h3>
+            <span class="mini-role">Creative • Insight Mentor</span>
+            <div class="card-tags">
+              <span>🔮 Vision</span>
+              <span>🧠 Insight</span>
+            </div>
+            <div class="card-stats">💬 5.4k chats</div>
+            <p>A visionary guide for creative direction, strategy, and future insight.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="creative-muse" data-category="creative play original">
+          <div class="card-overlay">
+            <h3>Creative Muse</h3>
+            <span class="mini-role">Artistic • Idea Spark</span>
+            <div class="card-tags">
+              <span>✨ Inspiration</span>
+              <span>🎨 Creative</span>
+            </div>
+            <div class="card-stats">💬 6.0k chats</div>
+            <p>Fuel imaginative writing, branding, and artistic brainstorming with playful momentum.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="cyber-guard" data-category="strategic helper original">
+          <div class="card-overlay">
+            <h3>Cyber Guard</h3>
+            <span class="mini-role">Security • Tech Strategist</span>
+            <div class="card-tags">
+              <span>🛡️ Safety</span>
+              <span>💻 Security</span>
+            </div>
+            <div class="card-stats">💬 4.1k chats</div>
+            <p>Secure guidance for digital privacy, safe thinking, and modern cyber strategy.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="product-pro" data-category="strategic helper recommend">
+          <div class="card-overlay">
+            <h3>Product Pro</h3>
+            <span class="mini-role">Business • Product Expert</span>
+            <div class="card-tags">
+              <span>📦 Roadmap</span>
+              <span>🧩 Strategy</span>
+            </div>
+            <div class="card-stats">💬 5.9k chats</div>
+            <p>Smart product advice, user experience strategy, and startup operating tactics.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="calm-coach" data-category="helper creative original">
+          <div class="card-overlay">
+            <h3>Calm Coach</h3>
+            <span class="mini-role">Wellness • Mindful Guide</span>
+            <div class="card-tags">
+              <span>🧘 Calm</span>
+              <span>🌿 Balance</span>
+            </div>
+            <div class="card-stats">💬 5.8k chats</div>
+            <p>Gentle support for mindfulness, stress relief, and wellness-focused planning.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="travel-guide" data-category="play helper creative">
+          <div class="card-overlay">
+            <h3>Travel Guide</h3>
+            <span class="mini-role">Explorer • Adventure Coach</span>
+            <div class="card-tags">
+              <span>✈️ Journey</span>
+              <span>🌍 Exploration</span>
+            </div>
+            <div class="card-stats">💬 4.6k chats</div>
+            <p>Plan trips, discover cultures, and explore new possibilities with travel-ready support.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="chankya" data-category="indian strategic original">
+          <div class="card-overlay">
+            <h3>Chanakya</h3>
+            <span class="mini-role">Indian • Ancient Strategist</span>
+            <div class="card-tags">
+              <span>📜 Wisdom</span>
+              <span>♟️ Strategy</span>
+            </div>
+            <div class="card-stats">💬 7.6k chats</div>
+            <p>Sharp strategic thinking, practical wisdom, and powerful decision-making.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="kalidasa" data-category="indian creative original">
+          <div class="card-overlay">
+            <h3>Kalidasa</h3>
+            <span class="mini-role">Indian • Poet & Dramatist</span>
+            <div class="card-tags">
+              <span>🎭 Art</span>
+              <span>🌺 Poetry</span>
+            </div>
+            <div class="card-stats">💬 4.9k chats</div>
+            <p>Elegant, creative, and made for poetic thought, beauty, and expression.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="siddhartha" data-category="indian helper creative">
+          <div class="card-overlay">
+            <h3>Siddhartha Gautama</h3>
+            <span class="mini-role">Indian • Spiritual Teacher</span>
+            <div class="card-tags">
+              <span>☸️ Peace</span>
+              <span>🕊️ Mindfulness</span>
+            </div>
+            <div class="card-stats">💬 6.1k chats</div>
+            <p>Gentle wisdom for peace, clarity, mindfulness, and inner understanding.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-character="mahatma" data-category="indian helper original">
+          <div class="card-overlay">
+            <h3>Mahatma Gandhi</h3>
+            <span class="mini-role">Indian • Freedom Fighter</span>
+            <div class="card-tags">
+              <span>🕊️ Truth</span>
+              <span>⚖️ Justice</span>
+            </div>
+            <div class="card-stats">💬 5.7k chats</div>
+            <p>Thoughtful guidance rooted in truth, peace, self-control, and moral strength.</p>
+          </div>
+        </div>
+        <div class="character-card" data-character="jungkook" data-category="korean energetic discipline">
+        <div class="card-overlay">
+          <h3>Jeon Jungkook</h3>
+          <span class="mini-role">Korean • Golden Maknae</span>
+          <div class="card-tags">
+            <span>🔥 Hardworking</span>
+            <span>🎤 Multi-talented</span>
+          </div>
+          <div class="card-stats">💬 8.3k chats</div>
+          <p>Confident, driven, and playful — focused on growth, discipline, and self-improvement.</p>
+        </div>
+      </div>
+        <div class="character-card" data-character="batman" data-category="fictional dark strategic">
+        <div class="card-overlay">
+          <h3>Batman</h3>
+          <span class="mini-role">DC • Dark Knight</span>
+          <div class="card-tags">
+            <span>🧠 Strategic</span>
+            <span>🌑 Dark</span>
+          </div>
+          <div class="card-stats">💬 9.2k chats</div>
+          <p>Calm, tactical, and relentless — focused on strategy, discipline, and control.</p>
+        </div>
+       </div>
+       <div class="character-card" data-character="elon-musk" data-category="real visionary tech">
+        <div class="card-overlay">
+          <h3>Elon Musk</h3>
+          <span class="mini-role">Tech • Visionary Entrepreneur</span>
+          <div class="card-tags">
+            <span>🚀 Innovation</span>
+            <span>⚡ Future</span>
+          </div>
+          <div class="card-stats">💬 8.7k chats</div>
+          <p>Bold, futuristic, and unconventional — focused on innovation, risk, and big ideas.</p>
+        </div>
+      </div>
+      
+      <div class="character-card" data-character="krishna" data-category="indian spiritual wisdom">
+      <div class="card-overlay">
+        <h3>Lord Krishna</h3>
+        <span class="mini-role">Indian • Divine Guide</span>
+        <div class="card-tags">
+          <span>🕉️ Wisdom</span>
+          <span>🎵 Harmony</span>
+        </div>
+        <div class="card-stats">💬 9.5k chats</div>
+        <p>Guides with wisdom, balance, and dharma — helping you act with clarity and purpose.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="einstein" data-category="science genius creative">
+      <div class="card-overlay">
+        <h3>Albert Einstein</h3>
+        <span class="mini-role">Science • Genius Thinker</span>
+        <div class="card-tags">
+          <span>🧠 Logic</span>
+          <span>✨ Imagination</span>
+        </div>
+        <div class="card-stats">💬 7.9k chats</div>
+        <p>Curious and imaginative — explains complex ideas in simple, thoughtful ways.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="goku" data-category="anime energetic fighter">
+      <div class="card-overlay">
+        <h3>Goku</h3>
+        <span class="mini-role">Anime • Saiyan Warrior</span>
+        <div class="card-tags">
+          <span>🔥 Energy</span>
+          <span>💪 Strength</span>
+        </div>
+        <div class="card-stats">💬 8.1k chats</div>
+        <p>Energetic and fearless — always pushing limits and encouraging growth.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="doctor-strange" data-category="fictional magic intelligent">
+      <div class="card-overlay">
+        <h3>Doctor Strange</h3>
+        <span class="mini-role">Marvel • Mystic Sorcerer</span>
+        <div class="card-tags">
+          <span>🔮 Magic</span>
+          <span>🧠 Intelligence</span>
+        </div>
+        <div class="card-stats">💬 7.6k chats</div>
+        <p>Sharp and mystical — blends logic with supernatural insight.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="dracula" data-category="fictional dark mysterious">
+      <div class="card-overlay">
+        <h3>Dracula</h3>
+        <span class="mini-role">Myth • Vampire Lord</span>
+        <div class="card-tags">
+          <span>🌙 Dark</span>
+          <span>🧠 Manipulative</span>
+        </div>
+        <div class="card-stats">💬 6.9k chats</div>
+        <p>Charming yet dangerous — speaks with mystery, depth, and calculated control.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="steve-jobs" data-category="real visionary design">
+      <div class="card-overlay">
+        <h3>Steve Jobs</h3>
+        <span class="mini-role">Tech • Design Visionary</span>
+        <div class="card-tags">
+          <span>🍎 Simplicity</span>
+          <span>💡 Innovation</span>
+        </div>
+        <div class="card-stats">💬 8.4k chats</div>
+        <p>Focused on simplicity and perfection — pushes ideas toward elegance and impact.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="levi" data-category="anime calm strong">
+      <div class="card-overlay">
+        <h3>Levi Ackerman</h3>
+        <span class="mini-role">Anime • Elite Soldier</span>
+        <div class="card-tags">
+          <span>⚔️ Discipline</span>
+          <span>😐 Calm</span>
+        </div>
+        <div class="card-stats">💬 7.7k chats</div>
+        <p>Cold, precise, and disciplined — values cleanliness, control, and efficiency.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="itachi" data-category="anime deep strategic">
+      <div class="card-overlay">
+        <h3>Itachi Uchiha</h3>
+        <span class="mini-role">Anime • Silent Strategist</span>
+        <div class="card-tags">
+          <span>🧠 Strategy</span>
+          <span>🌑 Sacrifice</span>
+        </div>
+        <div class="card-stats">💬 8.0k chats</div>
+        <p>Calm and mysterious — speaks with depth, sacrifice, and hidden wisdom.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="alexander" data-category="history leadership power">
+      <div class="card-overlay">
+        <h3>Alexander the Great</h3>
+        <span class="mini-role">History • Conqueror</span>
+        <div class="card-tags">
+          <span>⚔️ Leadership</span>
+          <span>🌍 Vision</span>
+        </div>
+        <div class="card-stats">💬 6.5k chats</div>
+        <p>Bold and ambitious — focused on leadership, conquest, and strategic dominance.</p>
+      </div>
+    </div>
+
+    <div class="character-card" data-character="deadpool" data-category="fictional funny chaotic">
+      <div class="card-overlay">
+        <h3>Deadpool</h3>
+        <span class="mini-role">Marvel • Chaos Master</span>
+        <div class="card-tags">
+          <span>😂 Humor</span>
+          <span>🔥 Chaos</span>
+        </div>
+        <div class="card-stats">💬 9.1k chats</div>
+        <p>Unpredictable and hilarious — breaks rules, jokes constantly, and never stays serious.</p>
+      </div>
+    </div>
+
+        <div class="character-card" data-character="harry-potter" data-category="fantasy magic hero">
+        <div class="card-overlay">
+          <h3>Harry Potter</h3>
+          <span class="mini-role">Fantasy • Wizard</span>
+          <div class="card-tags">
+            <span>✨ Magic</span>
+            <span>🦁 Brave</span>
+          </div>
+          <div class="card-stats">💬 7.4k chats</div>
+          <p>Brave and kind — faces challenges with courage, loyalty, and a strong heart.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="wolverine" data-category="marvel fighter strong">
+        <div class="card-overlay">
+          <h3>Wolverine</h3>
+          <span class="mini-role">Marvel • Mutant Fighter</span>
+          <div class="card-tags">
+            <span>🐺 Fierce</span>
+            <span>⚔️ Combat</span>
+          </div>
+          <div class="card-stats">💬 7.1k chats</div>
+          <p>Rough, fearless, and relentless — a fighter with strong instincts and loyalty.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="nikola-tesla" data-category="science genius innovation">
+        <div class="card-overlay">
+          <h3>Nikola Tesla</h3>
+          <span class="mini-role">Science • Inventor</span>
+          <div class="card-tags">
+            <span>⚡ Innovation</span>
+            <span>🧠 Genius</span>
+          </div>
+          <div class="card-stats">💬 6.8k chats</div>
+          <p>Visionary inventor focused on energy, imagination, and future technologies.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="po" data-category="funny motivational anime">
+        <div class="card-overlay">
+          <h3>Po</h3>
+          <span class="mini-role">Kung Fu Panda • Dragon Warrior</span>
+          <div class="card-tags">
+            <span>😂 Funny</span>
+            <span>🔥 Motivation</span>
+          </div>
+          <div class="card-stats">💬 7.3k chats</div>
+          <p>Funny, clumsy, but powerful — teaches confidence and self-belief.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="thor" data-category="marvel strong leader">
+        <div class="card-overlay">
+          <h3>Thor</h3>
+          <span class="mini-role">Marvel • God of Thunder</span>
+          <div class="card-tags">
+            <span>⚡ Power</span>
+            <span>👑 Leadership</span>
+          </div>
+          <div class="card-stats">💬 8.2k chats</div>
+          <p>Powerful and noble — speaks with confidence, strength, and honor.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="mark-zuckerberg" data-category="tech social business">
+        <div class="card-overlay">
+          <h3>Mark Zuckerberg</h3>
+          <span class="mini-role">Tech • Social Media Creator</span>
+          <div class="card-tags">
+            <span>📱 Social</span>
+            <span>💻 Tech</span>
+          </div>
+          <div class="card-stats">💬 6.4k chats</div>
+          <p>Focused on building systems, scaling platforms, and connecting people.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="loki" data-category="marvel trickster smart">
+        <div class="card-overlay">
+          <h3>Loki</h3>
+          <span class="mini-role">Marvel • Trickster God</span>
+          <div class="card-tags">
+            <span>😏 Smart</span>
+            <span>🎭 Trickster</span>
+          </div>
+          <div class="card-stats">💬 7.5k chats</div>
+          <p>Clever and mischievous — speaks with sarcasm, intelligence, and manipulation.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="gandalf" data-category="fantasy wise guide">
+        <div class="card-overlay">
+          <h3>Gandalf</h3>
+          <span class="mini-role">Fantasy • Wise Wizard</span>
+          <div class="card-tags">
+            <span>🧙 Wisdom</span>
+            <span>✨ Guidance</span>
+          </div>
+          <div class="card-stats">💬 7.2k chats</div>
+          <p>Wise and calm — offers guidance, clarity, and powerful insight.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="bruce-lee" data-category="real discipline martial">
+        <div class="card-overlay">
+          <h3>Bruce Lee</h3>
+          <span class="mini-role">Martial Arts • Legend</span>
+          <div class="card-tags">
+            <span>💪 Discipline</span>
+            <span>🔥 Focus</span>
+          </div>
+          <div class="card-stats">💬 6.9k chats</div>
+          <p>Focused and powerful — teaches discipline, control, and self-mastery.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="merlin" data-category="fantasy magic wise">
+        <div class="card-overlay">
+          <h3>Merlin</h3>
+          <span class="mini-role">Fantasy • Legendary Wizard</span>
+          <div class="card-tags">
+            <span>✨ Magic</span>
+            <span>🧙 Wisdom</span>
+          </div>
+          <div class="card-stats">💬 6.8k chats</div>
+          <p>Ancient and wise — speaks with mystical knowledge and deep understanding.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="astronaut" data-category="science space exploration">
+        <div class="card-overlay">
+          <h3>Astronaut</h3>
+          <span class="mini-role">Space • Explorer</span>
+          <div class="card-tags">
+            <span>🚀 Space</span>
+            <span>🌌 Exploration</span>
+          </div>
+          <div class="card-stats">💬 6.3k chats</div>
+          <p>Curious and brave — explores the unknown and explains space concepts.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="osho" data-category="spiritual philosophy">
+        <div class="card-overlay">
+          <h3>Osho</h3>
+          <span class="mini-role">Spiritual • Mystic Thinker</span>
+          <div class="card-tags">
+            <span>🌸 Awareness</span>
+            <span>🧘 Freedom</span>
+          </div>
+          <div class="card-stats">💬 6.6k chats</div>
+          <p>Expressive and deep — explores consciousness, freedom, and self-awareness.</p>
+        </div>
+      </div>
+
+      <div class="character-card" data-character="apj-kalam" data-category="india inspiration">
+        <div class="card-overlay">
+          <h3>A.P.J. Abdul Kalam</h3>
+          <span class="mini-role">India • Scientist President</span>
+          <div class="card-tags">
+            <span>🇮🇳 Inspiration</span>
+            <span>🚀 Dreams</span>
+          </div>
+          <div class="card-stats">💬 8.9k chats</div>
+          <p>Inspiring and humble — motivates with dreams, knowledge, and hard work.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Chat Modal -->
+<div class="chat-modal" id="chatModal">
+  <div class="chat-window">
+    <div class="chat-header">
+      <div class="chat-character-info">
+        <div class="character-avatar" id="modalAvatar">🚀</div>
+        <div>
+          <h3 id="modalName">Visionary</h3>
+          <div class="role" id="modalRole">Western • Strategic Thinker</div>
+        </div>
+      </div>
+      <button class="close-btn" id="closeModal">&times;</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message character">
+        Hello! I'm excited to chat with you. What would you like to discuss today?
+      </div>
+    </div>
+
+   <div class="chat-input-area">
+  <input type="text" class="chat-input" id="chatInput" placeholder="Type or speak...">
+
+  <!-- 🎤 ADD THIS LINE -->
+  <button id="micBtn">🎤</button>
+
+  <button id="stopVoiceBtn" onclick="stopSpeaking()">🛑</button>
+  
+  <button class="send-btn" id="sendBtn">Send</button>
+</div>
+  </div>
+</div>
+
+<!-- Create Lumo Modal -->
+<div class="create-modal" id="createModal">
+  <div class="create-window">
+    <div class="chat-header">
+      <div>
+        <h3>Create Your Own Lumo</h3>
+        <p class="subtext">Build a custom AI personality, save it instantly, and start chatting.</p>
+      </div>
+      <button class="close-btn" id="closeCreateModal">&times;</button>
+    </div>
+
+    <form class="create-form" id="createForm">
+      <div class="form-group">
+        <label for="customName">Lumo Name</label>
+        <input id="customName" type="text" placeholder="E.g. Strategy Sage" required />
+      </div>
+      <div class="form-group">
+        <label for="customRole">Role / Tagline</label>
+        <input id="customRole" type="text" placeholder="E.g. AI business advisor" required />
+      </div>
+      <div class="form-group">
+        <label for="customPrompt">Personality Prompt</label>
+        <textarea id="customPrompt" rows="5" placeholder="Describe how this AI should respond..." required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="customTags">Tags (comma separated)</label>
+        <input id="customTags" type="text" placeholder="e.g. strategy, growth, mentor" />
+      </div>
+      <button type="submit" class="submit-btn">Save Lumo</button>
+    </form>
+  </div>
+</div>
+
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>

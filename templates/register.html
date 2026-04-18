@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Lumo</title>
+    <link rel="stylesheet" href="/static/css/register.css" />
+</head>
+<body>
+    <div class="signup-page">
+        <aside class="auth-side">
+            <div class="logo">Lumo</div>
+            <h1>Join Lumo.</h1>
+            <p class="auth-text">Create your account and step into a world of multiple AI perspectives.</p>
+
+            <div class="feature-list">
+                <div>🚀 Start with expert voices</div>
+                <div>🧠 Personalized AI guidance</div>
+                <div>🌏 Global character variety</div>
+            </div>
+
+            <p class="auth-note">One account gives you access to all personalities and Council mode.</p>
+        </aside>
+
+        <main class="auth-card">
+            <div class="signup-container">
+                <div class="logo">Lumo</div>
+                <p class="subtitle">Create Your Account</p>
+                <p class="tagline">Join Lumo and start conversations with global AI personalities.</p>
+
+                <div id="message"></div>
+
+                <form id="signupForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your full name"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Create a password"
+                        required
+                        minlength="6"
+                    />
+                    <button type="button" class="toggle-password" id="togglePassword">
+                        👁
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="password-wrapper">
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        placeholder="Confirm your password"
+                        required
+                        minlength="8"
+                    />
+                    <button type="button" class="toggle-password" id="toggleConfirmPassword">
+                        👁
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="signup-btn" id="signupBtn">Sign Up</button>
+        </form>
+
+        <div class="divider">
+            <span>or</span>
+        </div>
+
+        <a href="/login/google" class="google-btn">
+            <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
+            <span>Sign up with Google</span>
+        </a>
+        <div class="links">
+            <a href="/login">Already have an account? Login</a>
+        </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/register.js"></script>
+</body>
+</html>
